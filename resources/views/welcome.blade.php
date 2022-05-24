@@ -32,20 +32,20 @@
         </div>
 
 
-        <div class="mt-8 flex flex-col w-full px-12">
+        <div class="mt-8 flex flex-col w-full  px-2 md:px-12">
             @foreach ($liste_course as $liste_courses)
             
                 @if ($liste_courses->valide == 0)
-                    <div class="py-3 w-full flex flex-wrap rounded-lg shadow-sdw mb-3 placeholder-blueGray-300 text-blueGray-600 bg-white text-sm focus:outline-none ease-linear transition-all duration-150">
-                        <div class="w-1/12 flex justify-center items-center"><a href="{{route('valide',  ['id' => $liste_courses->id ])}}" class="bg-[#55891E] text-white active:bg-[#55891E]/80 hover:bg-[#55891E]/80 font-bold uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Valider</a></div>
-                        <div class="w-10/12 flex items-center text-lg"> {{$liste_courses->course}} </div>
-                        <div class="w-1/12 flex justify-center items-center"><a href="{{route('delete',  ['id' => $liste_courses->id ])}}" class="bg-[#E9410B] text-white active:bg-[#E9410B]/80 hover:bg-[#E9410B]/80 font-bold uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Supprimer</a></div>
+                    <div class="relative py-3 w-full flex flex-wrap rounded-lg shadow-sdw mb-3 placeholder-blueGray-300 text-blueGray-600 bg-white text-sm focus:outline-none ease-linear transition-all duration-150">
+                        <div class="w-3/12 md:w-3/12 lg:w-2/12 flex justify-center items-center"><a href="{{route('valide',  ['id' => $liste_courses->id ])}}" class="bg-[#55891E] text-white active:bg-[#55891E]/80 hover:bg-[#55891E]/80 md:font-bold md:uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Valider</a></div>
+                        <div class="w-6/12 md:w-6/12 lg:w-8/12 flex items-center text-sm md:text-lg"> {{$liste_courses->course}} </div>
+                        <div class="w-3/12 md:w-3/12 lg:w-2/12 flex justify-center items-center"><a href="{{route('delete',  ['id' => $liste_courses->id ])}}" class="bg-[#E9410B] text-white active:bg-[#E9410B]/80 hover:bg-[#E9410B]/80 md:font-bold md:uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Supprimer</a></div>
                     </div>
                 @else
                 <div class="py-3 w-full flex flex-wrap rounded-lg shadow-sdw mb-3 placeholder-blueGray-300 text-blueGray-600 bg-white/15 text-sm focus:outline-none ease-linear transition-all duration-150">
-                        <div class="w-1/12 flex justify-center items-center"><a href="{{route('devalide',  ['id' => $liste_courses->id ])}}" class="bg-[#E3AF0A] text-white active:bg-[#E3AF0A]/80 hover:bg-[#E3AF0A]/80 font-bold uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Dévalider</a></div>
-                        <div class="w-10/12 flex items-center"> <s>{{$liste_courses->course}}</s> </div>
-                        <div class="w-1/12 flex justify-center items-center"><a href="{{route('delete',  ['id' => $liste_courses->id ])}}" class="bg-[#E9410B] text-white active:bg-[#E9410B]/80 hover:bg-[#E9410B]/80 font-bold uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Supprimer</a></div>
+                        <div class="w-3/12 md:w-3/12 lg:w-2/12 flex justify-center items-center"><a href="{{route('devalide',  ['id' => $liste_courses->id ])}}" class="bg-[#E3AF0A] text-white active:bg-[#E3AF0A]/80 hover:bg-[#E3AF0A]/80 md:font-bold md:uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Dévalider</a></div>
+                        <div class="w-6/12 md:w-6/12 lg:w-8/12 flex items-center text-xs md:text-sm"> <s>{{$liste_courses->course}}</s> </div>
+                        <div class="w-3/12 md:w-3/12 lg:w-2/12 flex justify-center items-center"><a href="{{route('delete',  ['id' => $liste_courses->id ])}}" class="bg-[#E9410B] text-white active:bg-[#E9410B]/80 hover:bg-[#E9410B]/80 md:font-bold md:uppercase text-xs px-3 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150">Supprimer</a></div>
                     </div>
                 @endif
 
